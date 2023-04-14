@@ -38,21 +38,13 @@ public class TextEditor implements ActionListener {
     JTextArea textArea;
 
 
-
+// creating undomanger which collects all the edits happend through the menuitems
     UndoManager undoManager = new UndoManager();
 
 
+// create constructor
 
-
-
-
-
-
-
-
-
-
-    TextEditor(){
+      TextEditor(){
         // initialize the frame
         frame = new JFrame();
 
@@ -89,7 +81,7 @@ public class TextEditor implements ActionListener {
         selectAll = new JMenuItem("Select All");
         close = new JMenuItem("Close");
 
-        // add the action listeners to edit menu items
+        // add the action listeners to edit menu items 
         undo.addActionListener(this);
         redo.addActionListener(this);
         copy.addActionListener(this);
@@ -109,10 +101,7 @@ public class TextEditor implements ActionListener {
         edit.add(close);
 
 
-
-
-
-        // add menus to menubar
+      // add menus to menubar
         menuBar.add(file);
         menuBar.add(edit);
 
@@ -125,24 +114,35 @@ public class TextEditor implements ActionListener {
                 undoManager.addEdit(e.getEdit());
             }
         });
+          
+          
+          
      // create  content panel
         JPanel panel = new JPanel();
         panel.setBorder(new EmptyBorder(5,5,5,5));
         panel.setLayout(new BorderLayout(0,0));
+          
+          
         // add the text area to the panel
         panel.add(textArea, BorderLayout.CENTER);
+
         // creat scroll pane
         JScrollPane scrollPane = new JScrollPane(textArea,JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+          
         // add the scroll pane to the panel
         panel.add(scrollPane);
+          
         // add panel to frame
         frame.add(panel);
+          
         // set dimensions of frame
         frame.setBounds(100,100,400,400);
         frame.setTitle("Text Pad");
         frame.setVisible(true);
         frame.setLayout(null);
     }
+    
+    
 
     @Override
     public void actionPerformed(ActionEvent actionEvent){
@@ -176,22 +176,31 @@ public class TextEditor implements ActionListener {
         }
 
         if(actionEvent.getSource()==cut){
+            
             // performs cut operation
             textArea.cut();
         }
+        
         if(actionEvent.getSource()==paste){
+            
             // performs paste operation
             textArea.paste();
         }
+        
         if(actionEvent.getSource()==selectAll){
+            
             // performs select all operation
             textArea.selectAll();
         }
+        
         if(actionEvent.getSource()==close){
+            
             // performs closing editor operation
             System.exit(1);
         }
+        
         if(actionEvent.getSource()==openFile){
+            
             // open a file chooser
             JFileChooser fileChooser = new JFileChooser("C:");
             int chooseOption = fileChooser.showOpenDialog(null);
