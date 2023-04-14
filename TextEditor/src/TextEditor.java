@@ -38,18 +38,8 @@ public class TextEditor implements ActionListener {
     JTextArea textArea;
 
 
-
+  // create undomanger whcih collects all the edits happend through the buttons
     UndoManager undoManager = new UndoManager();
-
-
-
-
-
-
-
-
-
-
 
 
     TextEditor(){
