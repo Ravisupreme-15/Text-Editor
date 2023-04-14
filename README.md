@@ -20,6 +20,9 @@ The functionalities are:
 -> close
 
 * Text Area
+
+
+
 These are menus and menu items of respected menus. in menu bar we have two menus and each has its own menu items in their dropdowns which has functionalities and do some operations.
 
 
