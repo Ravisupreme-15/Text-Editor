@@ -1,5 +1,5 @@
 # Text-Editor
-This project about creating a basic texteditor and implementing some basic operation in texteditor for example open, save, close etc.
+This project about creating a basic texteditor and implementing some basic operation in texteditor for example open a file, save a file, close the window etc.
 
 
 
