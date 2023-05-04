@@ -19,10 +19,16 @@ The functionalities are:
 -> select All
 -> close
 
+
+* Theme
+-> dark theme
+-> moonlight theme
+-> default theme
+
 * Text Area
 
 
 
-These are menus and menu items of respected menus. in menu bar we have two menus and each has its own menu items in their dropdowns which has functionalities and do some operations.
+These are menus and menu items of respected menus. in menu bar we have three menus and each has its own menu items in their dropdowns which has functionalities and perform relevent operations.
 
 
